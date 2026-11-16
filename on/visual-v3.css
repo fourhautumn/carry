@@ -1,0 +1,74 @@
+/* Visual direction V3: one object as the entry, then clear editorial reading surfaces. */
+.portal-page,.object-work-page,.detail-page,.about-v2{background:#fff}
+.portal-page .portal-scene{position:relative}
+.portal-page .portal-id{display:block;position:absolute;left:clamp(24px,5vw,80px);top:clamp(340px,43vh,420px);z-index:3;text-align:left}
+
+.object-header{gap:18px}.object-header nav{min-width:0;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.object-header nav a{white-space:nowrap}
+.object-work-page .work-world{display:grid;grid-template-columns:minmax(310px,4fr) minmax(0,8fr);align-items:center;min-height:calc(100svh - 76px);padding:25px clamp(24px,4vw,70px) 42px;gap:clamp(10px,2vw,30px);overflow:visible}
+.object-work-page .work-left{position:relative;z-index:3;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:clamp(36px,6vh,75px) 0 42px}
+.object-work-page .work-title{position:static;pointer-events:auto}
+.object-work-page .work-title h1{font-size:clamp(65px,8vw,132px)}
+.object-work-page .work-title p{max-width:31ch;margin-top:25px;font-size:15px}
+.object-work-page .work-preview{position:relative;left:auto;top:auto;width:min(100%,390px);min-height:245px;padding:18px 0 0;border-top:2px solid var(--purple);opacity:1;transform:none;pointer-events:auto;background:#fff}
+.object-work-page .work-preview h2{font-size:clamp(25px,2.3vw,38px);max-width:14ch}
+.object-work-page .work-preview p{font-size:14px;max-width:36ch}
+.object-work-page .work-preview a{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
+.object-work-page .work-bag-wrap{width:100%;max-width:900px;margin:0;justify-self:end;padding:0;left:auto;transform:none}
+.object-work-page .hotspot{min-width:44px;min-height:44px}
+.object-work-page .hotspot:hover,.object-work-page .hotspot:focus-visible{filter:drop-shadow(0 -8px 8px rgba(87,24,140,.22))}
+.object-work-page .hotspot span{z-index:1}
+.object-work-page .work-mobile-index{display:none}
+
+.case-page.case-uae .case-hero{min-height:min(880px,100svh);justify-content:flex-end}
+.case-page.case-uae .case-hero-copy{width:min(46%,590px);padding-bottom:70px}
+.case-page.case-uae .case-art{inset:30px 16% 0 16%;display:grid;place-items:center}
+.case-page.case-uae .pixel-object{position:static;width:auto;height:min(100%,850px);max-width:100%;transform:translateY(-135px);filter:blur(10px);opacity:.82;animation:tower-resolve 1s steps(5,end) .1s forwards}
+@keyframes tower-resolve{to{filter:blur(0);opacity:.9}}
+.case-page.case-uae .case-theme{max-width:27ch}
+.case-page.case-hera .case-art{display:none}
+.case-page.case-hera .case-hero{min-height:0;padding-top:60px;padding-bottom:60px}
+.case-page.case-hera .case-hero-copy{width:100%;padding-bottom:0}
+.case-page.case-hera .case-hero h1{max-width:13em}
+.case-page.case-hera .case-content .hera-lab{margin-top:30px}
+.case-page.case-hera .case-intro{font-size:clamp(22px,2.1vw,30px);margin:0 0 45px}
+.case-page.case-tuide .case-hero{min-height:680px}
+.case-page.case-tuide .case-hero-copy{width:min(53%,650px)}
+.case-page.case-tuide .case-art{inset:40px 3% 15px 42%;display:grid;place-items:center}
+.case-page.case-tuide .tuide-hero-image{display:block;width:100%;height:100%;max-height:640px;object-fit:contain;filter:drop-shadow(16px 16px 14px rgba(42,22,60,.14))}
+.hera-model-note{margin-top:22px;padding:16px 20px;border-left:3px solid var(--purple);background:#f5f1fa;font-size:14px;line-height:1.6}
+.hera-model-note strong{color:var(--purple)}
+
+.notebook-page .notebook-index{background:#f0ebf6}
+.writing-index-preview{position:relative;min-height:520px;background:#f9f7fb;border:1px solid #d4ceda;padding:clamp(24px,4vw,60px);display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.writing-index-preview img{display:block;max-width:100%;width:100%;height:min(42vh,350px);object-fit:contain;background:#fff}
+.writing-index-preview .preview-meta{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--purple)}
+.writing-index-preview h2{font-size:clamp(25px,3vw,42px);line-height:1.15;letter-spacing:-.045em;margin:15px 0}
+.writing-index-preview a{font-weight:800;color:var(--purple);align-self:flex-start;padding:12px 0}
+.notebook-project-overview h1{font-size:clamp(44px,6vw,84px);line-height:1.05;letter-spacing:-.06em;color:var(--purple);margin:10px 0 35px}
+.article-reading-page .notebook-sheet{max-width:840px;margin:0 auto 80px;padding:clamp(28px,5vw,72px)}
+.article-reading-page .notebook-layout{display:block;max-width:900px;filter:none}
+.notebook-index ol button{display:grid;grid-template-columns:26px minmax(0,1fr) 14px;gap:8px;align-items:start;width:100%;padding:14px 0;text-align:left;border:0;background:none;color:inherit;cursor:pointer;line-height:1.3}
+.notebook-index ol button:hover,.notebook-index ol button:focus-visible,.notebook-index ol button[aria-current="true"]{color:var(--purple);padding-left:7px}
+.notebook-index ol button strong{font-size:clamp(13px,1.15vw,16px);font-weight:600;overflow-wrap:anywhere}
+.notebook-index ol button span{font-size:10px;color:var(--purple);font-weight:800;padding-top:3px}
+
+.tuide-reference-intro{margin:auto;padding:50px 0 80px}
+.tuide-reference-intro h2{font-size:clamp(31px,4vw,54px);line-height:1.15;letter-spacing:-.05em;margin:0 0 12px}
+.tuide-reference-intro>p{max-width:68ch;line-height:1.7}
+.tuide-reference-board{position:relative;min-height:660px;margin:30px 0 0;border-top:1px solid #c9c0d0;border-bottom:1px solid #c9c0d0;overflow:hidden;touch-action:pan-y}
+.tuide-ref{position:absolute;width:clamp(145px,19vw,260px);padding:0;border:0;background:#fff;box-shadow:8px 12px 25px rgba(35,20,53,.15);cursor:grab;text-align:left;transform:translate(var(--dx,0px),var(--dy,0px)) rotate(var(--angle));touch-action:none}
+.tuide-ref:active{cursor:grabbing}.tuide-ref img{display:block;width:100%;height:clamp(140px,18vw,220px);object-fit:cover}.tuide-ref span{display:block;padding:7px 10px;font-size:11px;font-weight:700}.tuide-ref:nth-child(1){left:5%;top:9%;--angle:-7deg}.tuide-ref:nth-child(2){left:37%;top:4%;--angle:5deg}.tuide-ref:nth-child(3){right:3%;top:15%;--angle:-3deg}.tuide-ref:nth-child(4){left:14%;bottom:8%;--angle:4deg}.tuide-ref:nth-child(5){left:46%;bottom:6%;--angle:-6deg}.tuide-ref:nth-child(6){right:1%;bottom:9%;--angle:6deg}
+.tuide-ref,.tuide-ref *{user-select:none;-webkit-user-drag:none}
+.tuide-observation{min-height:88px;margin:20px 0 0;font-size:16px;line-height:1.6;max-width:70ch}
+.tuide-observation strong{color:var(--purple)}
+.tuide-rights{font-size:11px!important;color:#63596a;line-height:1.5!important}
+.tuide-chapter-media{margin:28px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.tuide-chapter-media figure{margin:0}.tuide-chapter-media img{display:block;width:100%;height:auto;max-height:450px;object-fit:contain}.tuide-chapter-media figcaption{font-size:11px;color:#625a6b;margin-top:7px}
+.about-v2-contact .contact-pending{display:flex;justify-content:space-between;max-width:650px;margin:0;border-bottom:1px solid var(--ink);padding:22px 0;font-size:25px;font-weight:700}.about-v2-contact .contact-pending span{font-size:13px;font-weight:500;color:#665f70}
+
+@media(max-width:1199px){.object-work-page .work-world{grid-template-columns:1fr;min-height:0;padding:24px clamp(22px,4vw,50px) 55px}.object-work-page .work-left{padding:0;display:block}.object-work-page .work-title h1{font-size:clamp(70px,10vw,120px)}.object-work-page .work-title p{margin:15px 0 0}.object-work-page .work-bag-wrap{grid-row:2;width:min(100%,800px);justify-self:center}.object-work-page .work-preview{width:100%;min-height:0;max-width:780px;margin:10px auto 0}.object-work-page .work-preview h2{max-width:none}}
+@media(max-width:767px){.portal-page .portal-id{position:absolute;top:69px;left:20px;font-size:10px}.object-header{padding:10px 18px;min-height:66px;height:auto;align-items:flex-start}.object-header .brand{font-size:21px}.object-header nav{gap:9px}.object-header nav a{font-size:9px}.object-work-page .work-world{padding:25px 0 50px;display:block;overflow:hidden}.object-work-page .work-left{padding:0 20px}.object-work-page .work-title h1{font-size:70px}.object-work-page .work-title p{font-size:14px}.object-work-page .work-bag-wrap{width:110vw;max-width:none;margin:0 0 0 50%;left:auto;transform:translateX(-50%);animation:none}.object-work-page .work-preview{display:none}.object-work-page .work-mobile-index{display:block;padding:0 20px;margin:8px 0 0}.work-mobile-index a{display:grid;grid-template-columns:68px minmax(0,1fr) 24px;gap:9px;align-items:center;min-height:72px;border-top:1px solid #bdb4c7;text-decoration:none}.work-mobile-index a:last-child{border-bottom:1px solid #bdb4c7}.work-mobile-index span{font-size:10px;font-weight:800;color:var(--purple)}.work-mobile-index strong{font-size:18px;line-height:1.3}.work-mobile-index b{text-align:right;color:var(--purple)}.work-mobile-index a:focus-visible,.work-mobile-index a:hover{background:#f4eef9}.object-work-page .hotspot{min-width:44px;min-height:44px}.object-work-page .hotspot span{font-size:9px}.case-page.case-uae .case-hero{min-height:670px}.case-page.case-uae .case-hero-copy{width:100%;padding-bottom:0;justify-content:flex-start;padding-top:75px}.case-page.case-uae .case-art{inset:175px -10% 0 -10%}.case-page.case-uae .pixel-object{height:100%;max-width:90%;opacity:.6}.case-page.case-uae .case-hero h1{font-size:clamp(40px,10vw,67px)}.case-page.case-tuide .case-hero{min-height:700px}.case-page.case-tuide .case-hero-copy{width:100%;justify-content:flex-start;padding-top:70px}.case-page.case-tuide .case-art{inset:280px 0 0 0;opacity:.8}.tuide-reference-board{min-height:0;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:25px 10px 35px;touch-action:pan-x}.tuide-ref{position:relative;flex:0 0 70vw;width:70vw;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none;scroll-snap-align:center;touch-action:pan-x}.tuide-ref img{height:50vw}.tuide-chapter-media{grid-template-columns:1fr}.writing-index-preview{min-height:420px}}
+@media(prefers-reduced-motion:reduce){.case-page.case-uae .pixel-object{animation:none;filter:none}.tuide-ref,.object-work-page .hotspot{transition:none!important}}
+@media(max-width:767px){.object-work-page .work-bag-wrap{width:100%;max-width:none;margin:0;left:0;transform:none;animation:none}}
+@media(max-width:767px){.portal-page .portal-id{top:68px;left:20px}.case-page.case-uae .pixel-object{transform:translateY(-40px)}}
+@media(max-width:767px){.case-page.case-uae .case-hero{min-height:760px}.case-page.case-uae .case-art{inset:305px -10% 0 -10%}.case-page.case-uae .pixel-object{transform:none}.writing-index-page .notebook-index-inner>ol{max-height:none;overflow:visible}}
