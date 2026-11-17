@@ -6,7 +6,7 @@ body{background:#fff;color:var(--ink)}
 html{scroll-padding-top:86px}
 .object-header{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line)}
 
-/* One title with two compositions: a horizontal cover on desktop, lettering around the figure in portrait. */
+/* The same horizontal title sits beside the figure on desktop and above it on phones. */
 .portal-display{position:absolute;inset:0;z-index:2;margin:0;pointer-events:none;color:var(--purple);font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;text-shadow:1px 1px 0 #5d22a2,2px 2px 0 #521b90,3px 3px 0 #451579,5px 7px 9px rgba(45,17,69,.16)}
 .portal-display-wide{position:absolute;left:clamp(24px,5vw,80px);top:clamp(285px,36vh,350px);display:block;font-size:clamp(90px,9.7vw,175px);line-height:1;letter-spacing:-.08em;white-space:nowrap}
 .portal-display-dot{color:var(--lime);text-shadow:2px 2px 0 var(--purple)}
@@ -37,13 +37,15 @@ html{scroll-padding-top:86px}
   .portal-topnav{gap:7px;top:16px}
   .object-header nav{gap:7px}
   .object-header nav a[aria-current],.portal-topnav a[aria-current]{background:var(--lime);border-color:var(--lime);color:var(--ink)}
-  .portal-display-left,.portal-display-right{font-size:clamp(54px,14vw,68px)}
-  .portal-display-left{left:4%}
-  .portal-display-right{right:4%}
+  .portal-display-wide{display:block;top:clamp(106px,calc(100svh - 722px),122px);left:50%;transform:translateX(-50%);font-size:clamp(52px,15.5vw,72px);letter-spacing:-.075em}
+  .portal-display-left,.portal-display-right{display:none}
   .portal-topnav a:hover,.portal-topnav a:focus-visible,.object-header nav a:hover,.object-header nav a:focus-visible{background:var(--purple);border-color:var(--purple);color:#fff}
 }
 @media(max-width:600px) and (min-height:800px){
   .character-wrap{top:190px;bottom:auto;width:min(125vw,520px)}
+}
+@media(max-width:600px) and (max-height:799.9px){
+  .portal-display-wide{top:clamp(178px,calc(87svh - 466px),229px)}
 }
 @media(max-width:360px){
   .portal-wordmark{font-size:21px}
@@ -253,7 +255,7 @@ html{scroll-padding-top:86px}
 
 /* The UAE tower is the page's picture plane. Type and process notes sit on it. */
 .case-page.case-uae{position:relative;isolation:isolate;background:transparent;overflow:clip}
-.case-page.case-uae::before{content:"";position:fixed;z-index:0;inset:60px 0 0;background:url('a-pixel-tower.svg') center center / auto min(104vh,980px) no-repeat;opacity:.36;pointer-events:none;animation:uae-base-reveal .9s steps(5,end) both}
+.case-page.case-uae::before{content:"";position:fixed;z-index:0;inset:60px 0 0;background:url('assets/pixel-tower.svg') center center / auto min(104vh,980px) no-repeat;opacity:.36;pointer-events:none;animation:uae-base-reveal .9s steps(5,end) both}
 .case-page.case-uae .case-hero,.case-page.case-uae .case-content,.case-page.case-uae .case-bottom-nav{position:relative;z-index:1;background:transparent}
 .case-page.case-uae .case-art{display:none}
 .case-page.case-uae .case-hero{display:block;min-height:calc(100svh - 64px);max-width:none;padding:clamp(35px,5vw,80px) clamp(24px,5vw,80px) 8vh}
@@ -338,7 +340,7 @@ html{scroll-padding-top:86px}
 
 /* HERA's research surface uses a real latitude/longitude mesh as its page base. */
 .case-page.case-hera{position:relative;isolation:isolate;background:transparent;overflow:clip}
-.case-page.case-hera::before{content:"";position:fixed;z-index:0;inset:64px 0 0;background:url('a-globe-grid.svg') center center / min(91vw,940px) auto no-repeat;opacity:.52;pointer-events:none}
+.case-page.case-hera::before{content:"";position:fixed;z-index:0;inset:64px 0 0;background:url('assets/globe-grid.svg') center center / min(91vw,940px) auto no-repeat;opacity:.52;pointer-events:none}
 .case-page.case-hera .case-hero,.case-page.case-hera .case-content,.case-page.case-hera .case-bottom-nav{position:relative;z-index:1;background:transparent}
 .case-page.case-hera .case-hero{display:block;max-width:none;min-height:min(800px,94svh);padding:35px clamp(24px,5vw,80px) 50px}
 .case-page.case-hera .case-hero-copy{display:flex;flex-direction:column;justify-content:center;width:min(84%,1120px);min-height:calc(min(800px,94svh) - 85px);padding:90px 0 0}
@@ -388,3 +390,4 @@ html{scroll-padding-top:86px}
   .about-v2 .about-photo-landscape{width:83%;aspect-ratio:1.45}
   .about-v2 .about-photo-portrait{top:37%;width:43%;aspect-ratio:.76}
 }
+
